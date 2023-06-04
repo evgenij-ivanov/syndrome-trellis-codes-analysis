@@ -25,6 +25,9 @@ def viterbi(x: np.ndarray, message: np.ndarray, H_hat: np.ndarray) -> Tuple[list
     submatrices_number = len(message)
     path = [{} for _ in range(len(x))]
 
+    print(submatrices_number)
+    print(w)
+
     for _ in range(submatrices_number):
         for j in range(w):
             new_wght = wght.copy()
@@ -57,8 +60,8 @@ def viterbi(x: np.ndarray, message: np.ndarray, H_hat: np.ndarray) -> Tuple[list
             curCol = int(''.join(str(h_hat_item) for h_hat_item in reversed(H_hat[:,j])), 2)
             state = state ^ (y[indx] * curCol)
             indx -= 1
-        state = 2 * state + int(message[indm])
-        indm -= 1
         if indm < 0:
             break
+        state = 2 * state + int(message[indm])
+        indm -= 1
     return y, embedding_cost

@@ -119,9 +119,10 @@ if __name__ == '__main__':
         else:
             message = message_file.read()
 
-        k = len(x) // len(message)
-        
         binary_message = message_to_binary(message)
+        
+        k = len(x) // len(binary_messagec)
+        
 
         if not stegano:
             stegano = input('Type in stegano image path: ')
