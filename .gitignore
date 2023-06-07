@@ -1,0 +1,6 @@
+ml_stc_windows_vc_2008_v1.0/**
+**/**.png
+**/**.jpg
+diploma/**
+.idea/**
+.vscode/**
