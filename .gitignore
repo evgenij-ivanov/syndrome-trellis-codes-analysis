@@ -4,3 +4,4 @@ ml_stc_windows_vc_2008_v1.0/**
 diploma/**
 .idea/**
 .vscode/**
+**/__pycache__/**
